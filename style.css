@@ -1,0 +1,167 @@
+/* Define o conjunto de caracteres UTF-8 para o arquivo CSS. */
+@charset "UTF-8";
+
+/* Define a fonte 'arimo' e seu arquivo de fonte. */
+@font-face {
+    font-family: 'arimo';
+    src: url('Arimo-VariableFont_wght.ttf');
+}
+
+/* Estilos globais para redefinir margens, preenchimentos e caixa-modelo em todos os elementos. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo da página, incluindo a cor de fundo, fonte e cor do texto. */
+body {
+    background-color: #f9b9ab;
+    font-family: 'arimo', sans-serif;
+    color: #333;
+}
+
+/* Estilos para a barra de navegação (nav), incluindo cor de fundo, sombra, borda arredondada, fonte e alinhamento. */
+nav {
+    background-color: whitesmoke;
+    padding: 15px;
+    box-shadow: 10px 10px 10px rgb(145, 17, 17);
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: right;
+    margin: 0 15px;
+}
+
+/* Estilos para links na barra de navegação, incluindo cor do texto, remoção de sublinhado e margem à direita. */
+nav a {
+    color: #000; /* Cor do texto para links */
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* Estilos para a seção principal (main), incluindo margens, preenchimento, cor de fundo, borda arredondada e sombra. */
+main {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para cabeçalhos (h1), incluindo tamanho de fonte e margem inferior. */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para rótulos de formulário, incluindo negrito, exibição em bloco e margem inferior. */
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos para campos de entrada de texto e número em formulários, incluindo largura, preenchimento, margem inferior, borda e borda arredondada. */
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para botões de envio em formulários, incluindo cor de fundo, cor do texto, remoção de borda, preenchimento, cursor, borda arredondada e margem inferior. */
+form button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para tabelas, incluindo largura, colapso de borda e margem superior. */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Estilos para células de tabela (th e td), incluindo borda e preenchimento. */
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+/* Estilos para cabeçalhos de tabela (th) e células de tabela (td), incluindo preenchimento e alinhamento do texto à esquerda. */
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilos para a entrada de filtro "filtroCnpjNome", incluindo largura, preenchimento, margem inferior, borda e borda arredondada. */
+#filtroCnpjNome {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para o rodapé (footer), incluindo cor de fundo, fonte em negrito, preenchimento, alinhamento do texto, posição fixa na parte inferior e cor do texto. */
+footer {
+    background-color: rgb(114, 114, 114);
+    font-weight: bold;
+    padding: 10px; 
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: white; 
+}
+
+/* Estilos para botões, incluindo cor de fundo, cor do texto, remoção de borda, preenchimento, cursor, borda arredondada, margem inferior e tamanho de fonte. */
+button {
+    background-color: #D03E35; /* Cor de fundo do botão (vermelho) */
+    color: #fff; /* Cor do texto do botão (branco) */
+    border: none; /* Remover borda */
+    padding: 10px 20px; /* Tamanho dos botões (ajuste conforme necessário) */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de apontar */
+    margin-bottom: 10px; /* Espaçamento abaixo do botão */
+    font-size: 14px; /* Tamanho da fonte (ajuste conforme necessário) */
+    margin-right: 10px; /* Espaçamento entre os botões (ajuste conforme necessário) */
+}
+
+/* Estilizar o botão quando passar o mouse sobre ele */
+#cadastrarClienteBtn:hover, #excluirClientesBtn:hover, #editarClienteBtn:hover, #salvarBtn:hover, #submit:hover {
+    background-color: #B6322A; /* Altere a cor quando o mouse estiver sobre o botão */
+}
+
+/* Estilos para o container dos botões (para alinhá-los lado a lado) */
+.botoes {
+    display: flex; /* Exibir os botões em uma linha */
+    align-items: center; /* Alinhar verticalmente ao centro (opcional) */
+}
+
+/* Estilos gerais para campos de entrada de texto e botões, incluindo largura, preenchimento, margem inferior, borda, borda arredondada e tamanho de fonte. */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para cabeçalhos (h1), incluindo tamanho de fonte e margem inferior. */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}

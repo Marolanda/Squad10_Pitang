@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Visualização do Cliente</title>
+    <!-- Inclui o arquivo CSS externo para estilização da página. -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Define o ícone da página exibido na aba do navegador. -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+   
+    <!-- Barra de navegação com links para outras páginas e opção de login. -->
+    <nav>
+        <a href="#">Sobre a Pitang</a>
+        <a href="#">Contato</a>
+        <a href="Login.html" rel="next" target="_self">Entrar</a>
+        <a href="listagem-clientes.html">Listagem de Clientes</a>
+        <!-- Links ocultos que serão usados dinamicamente. -->
+        <a href="#" id="visualizacaoClienteLink" style="display: none;">Visualizar Cliente</a>
+        <a href="#" id="editarClienteLink" style="display: none;">Editar Cliente</a>
+    </nav>
+    
+    <main>
+        <h1>Dados do Cliente</h1>
+        <!-- Div para exibir os detalhes do cliente. Os dados serão preenchidos dinamicamente. -->
+        <div id="clienteDetails">
+            <p><strong>Nome:</strong> <span id="nomeCliente"></span></p>
+            <p><strong>CNPJ:</strong> <span id="cnpjCliente"></span></p>
+            <p><strong>Endereço:</strong> <span id="enderecoCliente"></span></p>
+            <p><strong>Email:</strong> <span id="emailCliente"></span></p>
+            <p><strong>Telefone:</strong> <span id="telefoneCliente"></span></p>
+            <p><strong>Responsável:</strong> <span id="responsavelCliente"></span></p>
+            <p><strong>Créditos de Páginas:</strong> <span id="creditosPaginas"></span></p>
+            <!-- Os dados do cliente selecionado serão carregados aqui dinamicamente. -->
+        </div>
+        <!-- Botão para editar o cliente. Um evento de clique é associado a ele. -->
+        <button id="editarClienteBtn">Editar Cliente</button>
+        <!-- Script para lidar com o evento de clique no botão de edição do cliente. -->
+        <script>
+            const editarClienteBtn = document.getElementById("editarClienteBtn");
+            
+            editarClienteBtn.addEventListener("click", function () {
+                // Redireciona para a página "editar-cliente.html" com os parâmetros dos dados do cliente.
+                window.location.href = `editar-cliente.html?nome=${nomeCliente}&cnpj=${cnpjCliente}`;
+            });
+        </script>
+    </main>
+
+    <!-- Rodapé da página. -->
+    <footer>
+        <p id="footerText">Site em desenvolvimento pelo Squad 10</p>
+    </footer>
+
+    <!-- Inclui o arquivo JavaScript externo para a funcionalidade da página. -->
+    <script src="script.js"></script>
+    <!-- Script para carregar os detalhes do cliente ao carregar a página. -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Recupera o parâmetro "clienteId" da URL.
+            const urlParams = new URLSearchParams(window.location.search);
+            const clienteId = urlParams.get("clienteId");
+
+            // Exemplo de preenchimento fictício (substitua pelo seu código real):
+            const cliente = {
+                nome: "Nome do Cliente",
+                cnpj: "XX.XXX.XXX/XXXX-XX",
+                endereco: "Endereço do Cliente",
+                email: "cliente@example.com",
+                telefone: "123-456-7890",
+                responsavel: "Responsável do Cliente",
+                creditosPaginas: 100,
+            };
+
+            // Preenche os elementos HTML com os detalhes do cliente.
+            document.getElementById("nomeCliente").textContent = cliente.nome;
+            document.getElementById("cnpjCliente").textContent = cliente.cnpj;
+            document.getElementById("enderecoCliente").textContent = cliente.endereco;
+            document.getElementById("emailCliente").textContent = cliente.email;
+            document.getElementById("telefoneCliente").textContent = cliente.telefone;
+            document.getElementById("responsavelCliente").textContent = cliente.responsavel;
+            document.getElementById("creditosPaginas").textContent = cliente.creditosPaginas;
+        });
+    </script>
+</body>
+</html>

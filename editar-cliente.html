@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configuração da codificação de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Configuração de exibição em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Vinculação do arquivo CSS para estilização -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Editar Cliente</title>
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav>
+        <!-- Links de navegação -->
+        <a href="#">Sobre a Pitang</a>
+        <a href="#">Contato</a>
+        <a href="Login.html" rel="next" target="_self">Entrar</a>
+        <a href="listagem-clientes.html" id="listagemClientesLink">Listagem de Clientes</a>
+        <a href="visualizar-cliente.html" id="visualizacaoClienteLink" style="display: none;">Visualizar Cliente</a>
+        <a href="editar-cliente.html" id="editarClienteLink" style="display: none;">Editar Cliente</a>
+    </nav>
+    
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Formulário de edição de cliente -->
+        <form id="editarClienteForm">
+            <!-- Campos do formulário -->
+            <label for="nomeCliente">Nome:</label>
+            <input type="text" id="nomeCliente" required>
+
+            <label for="cnpjCliente">CNPJ:</label>
+            <input type="text" id="cnpjCliente" required>
+
+            <label for="enderecoCliente">Endereço:</label>
+            <input type="text" id="enderecoCliente" required>
+
+            <label for="emailCliente">Email:</label>
+            <input type="email" id="emailCliente" required>
+
+            <label for="telefoneCliente">Telefone:</label>
+            <input type="tel" id="telefoneCliente" required>
+
+            <label for="responsavelCliente">Responsável:</label>
+            <input type="text" id="responsavelCliente" required>
+
+            <label for="creditosPaginas">Créditos de Páginas:</label>
+            <input type="number" id="creditosPaginas" required>
+
+            <!-- Botão para salvar as alterações -->
+            <button id="salvarBtn">Salvar Alterações</button>
+
+            <!-- Script para evitar o envio do formulário e redirecionar o usuário após o envio -->
+            <script>
+                document.getElementById("editarClienteForm").addEventListener("submit", function (e) {
+                    // Evite que o formulário seja enviado (recarregamento da página)
+                    e.preventDefault();
+                    
+                    // Redirecione o usuário para a página de listagem de clientes após o envio do formulário
+                    window.location.href = "listagem-clientes.html";
+                });
+            </script>
+        </form>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <!-- Texto do rodapé (exibe "Site em desenvolvimento pelo Squad 10") -->
+        <p id="footerText">Site em desenvolvimento pelo Squad 10</p>
+    </footer>
+
+    <!-- Script para preencher os campos do formulário com os dados do cliente -->
+    <script>
+        // Recuperar os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nome = urlParams.get("nome");
+        const cnpj = urlParams.get("cnpj");
+        const endereco = urlParams.get("endereco");
+        const email = urlParams.get("email");
+        const telefone = urlParams.get("telefone");
+        const responsavel = urlParams.get("responsavel");
+        const creditosPaginas = urlParams.get("creditosPaginas");
+
+        // Preencher os campos com os dados do cliente
+        document.getElementById("nomeCliente").value = nome || "Nome do Cliente";
+        document.getElementById("cnpjCliente").value = cnpj || "XX.XXX.XXX/XXXX-XX";
+        document.getElementById("enderecoCliente").value = endereco || "Endereço do Cliente";
+        document.getElementById("emailCliente").value = email || "cliente@example.com";
+        document.getElementById("telefoneCliente").value = telefone || "123-456-7890";
+        document.getElementById("responsavelCliente").value = responsavel || "Responsável do Cliente";
+        document.getElementById("creditosPaginas").value = creditosPaginas || "100";
+    </script>
+</body>
+</html>

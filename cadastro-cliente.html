@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configuração da codificação de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Configuração de exibição em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Cadastro de Cliente - Pitang</title>
+
+    <!-- Vinculação do arquivo CSS para estilização -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícone da página exibido na aba do navegador -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav>
+        <!-- Links de navegação -->
+        <a href="#">Sobre a Pitang</a>
+        <a href="#">Contato</a>
+        <a href="Login.html" rel="next" target="_self">Entrar</a>
+
+        <!-- Link para a página de listagem de clientes (inicialmente oculto) -->
+        <a href="listagem-clientes.html" id="listagemClientesLink">Listagem de Clientes</a>
+
+        <!-- Link para a página de visualização de cliente (inicialmente oculto) -->
+        <a href="visualizar-cliente.html" id="visualizacaoClienteLink" style="display: none;">Visualizar Cliente</a>
+
+        <!-- Link para a página de edição de cliente (inicialmente oculto) -->
+        <a href="editar-cliente.html" id="editarClienteLink" style="display: none;">Editar Cliente</a>
+    </nav>
+    
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Título principal da página (exibe "Cadastro de Cliente") -->
+        <h1 id="pageTitle">Cadastro de Cliente</h1>
+
+        <!-- Formulário de cadastro de cliente -->
+        <form id="cadastroClienteForm">
+            <!-- Campos do formulário -->
+            <label for="nomeCliente">Nome do Cliente:</label>
+            <input type="text" id="nomeCliente" required>
+
+            <label for="cnpjCliente">CNPJ do Cliente:</label>
+            <input type="text" id="cnpjCliente" required pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" title="Digite um CNPJ válido no formato XX.XXX.XXX/XXXX-XX">
+
+            <label for="enderecoCliente">Endereço:</label>
+            <input type="text" id="enderecoCliente" required>
+
+            <label for="emailCliente">Email:</label>
+            <input type="email" id="emailCliente" required>
+
+            <label for="telefoneCliente">Telefone:</label>
+            <input type="tel" id="telefoneCliente" required>
+
+            <label for="responsavelCliente">Responsável:</label>
+            <input type="text" id="responsavelCliente" required>
+
+            <label for="creditosPaginas">Créditos de Páginas:</label>
+            <input type="number" id="creditosPaginas" required>
+
+            <!-- Botão para cadastrar cliente -->
+            <button id="submit">Cadastrar Cliente</button>
+        </form>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <!-- Texto do rodapé (exibe "Site em desenvolvimento pelo Squad 10") -->
+        <p id="footerText">Site em desenvolvimento pelo Squad 10</p>
+    </footer>
+
+    <!-- Vinculação do arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

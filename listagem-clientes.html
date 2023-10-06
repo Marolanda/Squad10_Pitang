@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configuração da codificação de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Configuração de exibição em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Listagem de Clientes - Pitang</title>
+
+    <!-- Vinculação do arquivo CSS para estilização -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícone exibido na aba do navegador -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Vinculação do arquivo CSS novamente (pode ser removido) -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav>
+        <!-- Links de navegação -->
+        <a href="#">Sobre a Pitang</a>
+        <a href="#">Contato</a>
+        <a href="Login.html" rel="next" target="_self">Entrar</a>
+        <a href="listagem-clientes.html" id="listagemClientesLink">Listagem de Clientes</a>
+        <a href="visualizar-cliente.html" id="visualizacaoClienteLink" style="display: none;">Visualizar Cliente</a>
+        <a href="editar-cliente.html" id="editarClienteLink" style="display: none;">Editar Cliente</a>
+    </nav>
+    
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Título da página -->
+        <h1 id="pageTitle">Listagem de Clientes</h1>
+
+        <!-- Div para o botão de filtro e botões de ação -->
+        <div id="buttonAndFilter">
+            <!-- Campo de filtro por CNPJ ou Nome -->
+            <input type="text" id="filtroCnpjNome" placeholder="Filtrar por CNPJ ou Nome">
+
+            <!-- Botão para excluir clientes selecionados -->
+            <button id="excluirClientesBtn">Excluir Clientes Selecionados</button>
+
+            <!-- Botão para cadastrar um novo cliente -->
+            <button id="cadastrarClienteBtn">Cadastrar Cliente</button>
+
+            <!-- Script para redirecionar o usuário para a página de cadastro de cliente -->
+            <script>
+                const cadastrarClienteBtn = document.getElementById("cadastrarClienteBtn");
+                cadastrarClienteBtn.addEventListener("click", function () {
+                    window.location.href = "cadastro-cliente.html";
+                });
+            </script>
+        </div>
+
+        <!-- Tabela de listagem de clientes -->
+        <table id="listaClientes">
+            <thead>
+                <tr>
+                    <!-- Coluna vazia para checkboxes -->
+                    <th></th>
+
+                    <!-- Títulos das colunas -->
+                    <th>Nome</th>
+                    <th>CNPJ</th>
+                    <th>Crédito</th>
+                    <th>Email</th>
+                </tr>
+            </thead>        
+            <tbody>
+                <!-- Exemplos de clientes fictícios com checkboxes -->
+                <tr>
+                    <td><input type="checkbox" class="selecionarCliente" value="ID_DO_CLIENTE"></td>
+                    <td><a href="visualizar-cliente.html" data-cliente-id="1">Nome do Cliente 1</a></td>
+                    <td>12.345.678/0001-90</td>
+                    <td>1000</td>
+                    <td>cliente1@example.com</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="selecionarCliente" value="ID_DO_CLIENTE"></td>
+                    <td><a href="visualizar-cliente.html" data-cliente-id="2">Nome do Cliente 2</a></td>
+                    <td>98.765.432/0001-21</td>
+                    <td>750</td>
+                    <td>cliente2@example.com</td>
+                </tr>
+                <!-- Adicione mais exemplos de clientes conforme necessário -->
+            </tbody>
+        </table>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <!-- Texto do rodapé (exibe "Site em desenvolvimento pelo Squad 10") -->
+        <p id="footerText">Site em desenvolvimento pelo Squad 10</p>
+    </footer>
+
+    <!-- Inclusão do arquivo JavaScript para funcionalidades -->
+    <script src="script.js"></script>
+</body>
+</html>
