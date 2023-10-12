@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const pageContent = document.getElementById("pageContent");
     let clienteIdSelecionado = null; // Variável para armazenar o ID do cliente selecionado
 
+    // Adicione um evento de clique ao botão "Entrar"
+    const entrarBtn = document.getElementById("entrarBtn");
+
+    entrarBtn.addEventListener("click", function () {
+        // Redireciona o usuário para a página de listagem de clientes
+        window.location.href = "listagem-clientes.html";
+    });
+
+
     // Função para carregar a página de cadastro de cliente
     function carregarPaginaCadastroCliente() {
         // Altera o título da página e o conteúdo principal para o formulário de cadastro de cliente.
@@ -101,8 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
-    // Inicialmente, carregar a página de Listagem de Clientes
-    carregarPaginaListagemClientes();
+    // Inicialmente, carregar a página index
+    carregarPaginaIndex();
 
     // ...
 });
