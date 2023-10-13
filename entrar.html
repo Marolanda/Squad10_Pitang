@@ -45,9 +45,12 @@
     </footer>
 
     <script>
-        // Adiciona um evento de clique ao botão "Entrar"
-        document.getElementById("entrarBtn").addEventListener("click", function () {
+         // Adiciona um evento de clique ao botão "Entrar"
+        document
+            .getElementById("entrarBtn")
+            .addEventListener("click", function (event) {
             // Redireciona o usuário para a página de listagem de clientes
+            event.preventDefault();
             window.location.href = "listagem-clientes.html";
         });
     </script>           
