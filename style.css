@@ -55,6 +55,15 @@ h1 {
     margin-bottom: 20px;
 }
 
+p{
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+p.especial{
+background-color: #f9b9ab46;}
+
 /* Estilos para rótulos de formulário, incluindo negrito, exibição em bloco e margem inferior. */
 form label {
     font-weight: bold;
