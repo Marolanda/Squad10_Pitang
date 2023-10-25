@@ -22,26 +22,25 @@ body {
 }
 
 /* Estilos para a barra de navegação (nav), incluindo cor de fundo, sombra, borda arredondada, fonte e alinhamento. */
-nav{
+nav {
     padding: 0px;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(83,0,0,1) 50%, rgba(255,0,0,1) 100%);
-    height: 50px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 51, 0) 100%);
+    height: 60px;
 }
-.logo{
-    padding-top: 10px;
-    padding-bottom: 2px;
-    padding-left: 670px;
-    height: 45px;
-}
+
+
 .navbar {
-    font-family: 'Open Sans', sans-serif;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(83,0,0,1) 50%, rgba(255,0,0,1) 100%);
-    padding-top: 12px;
+    font-family: 'arimo', sans-serif;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(83, 0, 0, 1) 50%, rgba(255, 0, 0, 1) 100%);
+    padding-top: 10px;
     
-    text-align: center;
-    
+    text-align: center; 
+}
+
+.linkpaginas:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Estilos para links na barra de navegação, incluindo cor do texto, remoção de sublinhado e margem à direita. */
