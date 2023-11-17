@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização do Cliente</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <a href="https://www.pitang.com/" target="_blank"></a>
+        <img src="pitang-logo2.png" alt="logo pitang" title="Pitang" class="logo">
+    </nav>
+    
+    <nav class="navbar">
+        <a href="editar-cliente.html" id="editarClienteLink" rel="next" target="_self">Editar Cliente</a>
+        <a href="listagem-clientes.html" class="linkpaginas" rel="next" target="_self">Listagem de Clientes</a>
+        <a href="visualizar-cliente.html" id="visualizacaoClienteLink" rel="next" target="_self">Visualizar Cliente</a>
+        <a href="cadastro-cliente.html" rel="next" target="_self">Cadastro de Cliente</a>
+        <a href="index.html" rel="next" target="_self"> Sair </a>
+        <a href="#" id="editarClienteLink" style="display: none;">Editar Cliente</a>
+        <a href="#" id="visualizacaoClienteLink" style="display: none;">Visualizar Cliente</a>
+        <a href="#" id="editarClienteLink" style="display: none;">Editar Cliente</a>
+    </nav>
+    
+    <main>
+
+        <h1>Visualizar cliente</h1>
+        <div>
+            <p class="infoCampo"><strong>Nome:</strong> <span id="nomeCliente"></span><br></p>
+            <p class="infoCampo"><strong>CNPJ:</strong> <span id="cnpjCliente"></span></p>
+            <p class="infoCampo"><strong>Endereço:</strong> <span id="enderecoCliente"></span></p>
+            <p class="infoCampo"><strong>Email:</strong> <span id="emailCliente"></span></p>
+            <p class="infoCampo"><strong>Telefone:</strong> <span id="telefoneCliente"></span></p>
+            <p class="infoCampo"><strong>Responsável:</strong> <span id="responsavelCliente"></span></p>
+            <p class="infoCampo"><strong>Créditos de Páginas:</strong> <span id="creditosPaginas"></span></p>
+            <br>
+        </div>                       
+   
+        <button id="editarClienteBtn">Editar Cliente</button>
+   
+        <script>
+            const editarClienteBtn = document.getElementById("editarClienteBtn");
+            
+            editarClienteBtn.addEventListener("click", function () {
+                window.location.href = `editar-cliente.html?nome=${nomeCliente}&cnpj=${cnpjCliente}`;
+            });
+        </script>
+    </main>
+   
+    <!-- Inclui o arquivo JavaScript externo para a funcionalidade da página. -->
+    <script src="script.js"></script>
+    <!-- Script para carregar os detalhes do cliente ao carregar a página. -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Recupera o parâmetro "clienteId" da URL.
+            const urlParams = new URLSearchParams(window.location.search);
+            const clienteId = urlParams.get("clienteId");
+
+            // Exemplo de preenchimento fictício (substitua pelo seu código real):
+            const cliente = {
+                nome: "Nome do Cliente 1",
+                cnpj: "12.345.678/0001-90",
+                endereco: "Endereço do Cliente",
+                email: "cliente@example.com",
+                telefone: "123-456-7890",
+                responsavel: "Responsável do Cliente",
+                creditosPaginas: 1000,
+            };
+
+            // Preenche os elementos HTML com os detalhes do cliente.
+            document.getElementById("nomeCliente").textContent = cliente.nome;
+            document.getElementById("cnpjCliente").textContent = cliente.cnpj;
+            document.getElementById("enderecoCliente").textContent = cliente.endereco;
+            document.getElementById("emailCliente").textContent = cliente.email;
+            document.getElementById("telefoneCliente").textContent = cliente.telefone;
+            document.getElementById("responsavelCliente").textContent = cliente.responsavel;
+            document.getElementById("creditosPaginas").textContent = cliente.creditosPaginas;
+        });
+    </script>
+</body>
+
+<footer class="rodape">
+    <div class="rodape">
+
+        <div class="rodape-div-1">
+            <div class="rodape-div-1-coluna">
+                <img src="pitang-logo2.png" alt="logo pitang" title="Pitang" class="logo1">
+                <p>Cais do Apolo, 222 - 13º Andar - Recife, PE, 50030-230</p>
+                <p>(81) 3134-5200</p>
+            </div>
+        </div>
+
+        <div class="rodape-div-2">
+            <div class="rodape-div-2-coluna">
+                <span><b>Desenvolvido pelo Squad 10</b></span>
+            </div>
+        </div>
+
+
+
+    </div>
+    <p class="rodape-direitos">Copyright © 2023 – Todos os Direitos Reservados.</p>
+</footer>
+</html>
+

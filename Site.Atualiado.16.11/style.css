@@ -1,0 +1,182 @@
+/* Define o conjunto de caracteres UTF-8 para o arquivo CSS. */
+@charset "UTF-8";
+
+/* Define a fonte 'arimo' e seu arquivo de fonte. */
+@font-face {
+    font-family: 'arimo';
+    src: url('Arimo-VariableFont_wght.ttf');
+}
+
+/* Estilos globais para redefinir margens, preenchimentos e caixa-modelo em todos os elementos. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o corpo da página, incluindo a cor de fundo, fonte e cor do texto. */
+body {
+    background: #e47137a4;
+    font-family:  sans-serif;
+    color: #333;
+}
+
+/* Barra de navegação universal (todas as telas) */
+nav{
+    padding: 0px;
+    background-image: linear-gradient(to left, #37051d, #68002c, #9c0032, #cf002e, #ff001b);
+    height: 50px;
+    
+}
+img pitang { margin: 0 auto; display: block; }
+
+
+.logo{
+    padding-top: 10px;
+    padding-bottom: 2px;
+    padding-left: 590px;
+    height: 45px;
+}
+.navbar {
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(to left, #37051d, #68002c, #9c0032, #cf002e, #ff001b);
+    padding-top: 0;
+    text-align: center;
+}
+nav a {
+    color: #fff; /* Cor do texto para links */
+    text-decoration: none;
+    font-size: 13.5px;
+    margin-right: 20px;
+    
+}
+/* Fim dos estilos para barra de navegação universal */
+
+/* Estilos para a seção principal (main), incluindo margens, preenchimento, cor de fundo, borda arredondada e sombra. */
+main {
+    margin: 20px;
+    padding: 20px;
+    max-width: 600px;
+    margin-left: 460px; 
+    height: 450px;
+    color:#000;
+    margin-top: 20px;
+}
+.rodape{
+    background-color: #d34c2a;
+    color: white;
+    height: auto;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+
+.rodape-div-1, .rodape-div-2 {
+    display: flex;
+    width: calc(100% / 2 - 40px);
+    padding: 10px;
+}
+
+.rodape-direitos{
+    width: calc(100%);
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+.logo1 {
+    padding-top: 10px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    height: 45px;
+}
+
+/* Estilos específicos para a página de visualizar cliente*/
+#dadosCliente{
+    font-family: 'Open Sans';
+    color: hsla(0, 0%, 0%, 0);
+    margin-left: 700px;
+}
+#clienteDetails{
+    text-align: center;
+}
+#cnpjCampo{
+    font-family: 'Open Sans';
+    font-size: 17px;
+    padding-right: 200px;
+    padding-top: 25px;
+    max-width: 300px;
+    color: #f8f8ff;
+    border-radius: 12px;
+    height: 70px;
+    text-align: center;
+   
+    
+}
+#cnpjCliente{
+    color: #000000;
+    font-size: 17px;
+    text-align: center;
+}
+
+#nomeCampo{
+    font-family: 'Open Sans';
+    font-size: 15px;
+    color: #f8f8ff;
+    text-align: left;
+}
+
+#nomeCliente{
+    color: #000000;
+    font-size: 17px;
+    text-align: center;
+}
+#enderecoCampo{
+    font-family: 'Open Sans';
+    font-size: 15px;
+    color: #fff;
+    border-radius: 12px;
+    height: 43px;
+    text-align: left;
+    padding-left: 8px;
+    background:#ff001b;
+    padding-top: 10px;
+    
+}
+#enderecoCliente{
+    color: #000000;
+    font-size: 17px;
+    text-align: center;
+}
+#emailCampo{
+    font-family: 'Open Sans';
+    color: #fff;
+    background: #ff001b;
+    border-radius: 12px;
+    height: 43px;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 8px;
+    padding-top: 10px;
+    margin-top: 13px;
+}
+#emailCliente{
+    color: #000000;
+    font-size: 17px;
+    text-align: center;
+}
+#telefoneCampo{
+    font-family: 'Open Sans';
+    font-size: 15px;
+    color: #fff;
+    border-radius: 12px;
+    height: 43px;
+    text-align: left;
+    padding-left: 8px;
+    background:#ff001b;
+    padding-top: 10px;
+}
+
+    

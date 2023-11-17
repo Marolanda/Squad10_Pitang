@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Clientes - Pitang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="https://www.pitang.com/" target="_blank"></a>
+            <img src="pitang-logo2.png" alt="logo pitang" title="Pitang" class="logo">
+        </nav>
+        
+        <nav class="navbar">
+        <!-- Links de navegação -->
+        <a href="editar-cliente.html" id="editarClienteLink" rel="next" target="_self">Editar Cliente</a>
+        <a href="listagem-clientes.html" class="linkpaginas" rel="next" target="_self">Listagem de Clientes</a>
+        <a href="visualizar-cliente.html" id="visualizacaoClienteLink" rel="next" target="_self">Visualizar Cliente</a>
+        <a href="cadastro-cliente.html" rel="next" target="_self">Cadastro de Cliente</a>
+        <a href="index.html" rel="next" target="_self"> Sair </a>
+        
+       
+    </nav>
+</header>
+    
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Título da página -->
+        <h1 id="pageTitle">Listagem de Clientes</h1>
+
+        <!-- Div para o botão de filtro e botões de ação -->
+        <div id="buttonAndFilter">
+            <!-- Campo de filtro por CNPJ ou Nome -->
+            <input type="text" id="filtroCnpjNome" placeholder="Filtrar por CNPJ ou Nome">
+
+           
+           
+
+            <!-- Script para redirecionar o usuário para a página de cadastro de cliente -->
+            <script>
+                const cadastrarClienteBtn = document.getElementById("cadastrarClienteBtn");
+                cadastrarClienteBtn.addEventListener("click", function () {
+                    window.location.href = "cadastro-cliente.html";
+                });
+            </script>
+        </div>
+
+        <!-- Tabela de listagem de clientes -->
+        <table id="listaClientes">
+            <thead>
+                <tr>
+                    <!-- Coluna vazia para checkboxes -->
+                    <th></th>
+
+                    <!-- Títulos das colunas -->
+                    <th>Nome</th>
+                    <th>CNPJ</th>
+                    <th>Crédito</th>
+                    <th>Email</th>
+                </tr>
+            </thead>        
+            <tbody>
+                <!-- Exemplos de clientes fictícios com checkboxes -->
+                <tr>
+                    <td><input type="checkbox" class="selecionarCliente" value="ID_DO_CLIENTE"></td>
+                    <td><a href="visualizar-cliente.html" data-cliente-id="1">Nome do Cliente 1</a></td>
+                    <td>12.345.678/0001-90</td>
+                    <td>1000</td>
+                    <td>cliente1@example.com</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="selecionarCliente" value="ID_DO_CLIENTE"></td>
+                    <td><a href="visualizar-cliente.html" data-cliente-id="2">Nome do Cliente 2</a></td>
+                    <td>98.765.432/0001-21</td>
+                    <td>750</td>
+                    <td>cliente2@example.com</td>
+                </tr>
+                <!-- Adicione mais exemplos de clientes conforme necessário -->
+            </tbody>
+        </table>
+<br>
+         <!-- Botão para excluir clientes selecionados -->
+         <button id="excluirClientesBtn">Excluir Clientes Selecionados</button>
+
+    </main>
+
+
+
+    <!-- Inclusão do arquivo JavaScript para funcionalidades -->
+    <script src="script.js"></script>
+</body>
+
+<footer class="rodape">
+    <div class="rodape">
+
+        <div class="rodape-div-1">
+            <div class="rodape-div-1-coluna">
+                <img src="pitang-logo2.png" alt="logo pitang" title="Pitang" class="logo1">
+                <p>Cais do Apolo, 222 - 13º Andar - Recife, PE, 50030-230</p>
+                <p>(81) 3134-5200</p>
+            </div>
+        </div>
+
+        <div class="rodape-div-2">
+            <div class="rodape-div-2-coluna">
+                <span><b>Desenvolvido pelo Squad 10</b></span>
+            </div>
+        </div>
+
+
+
+    </div>
+    <p class="rodape-direitos">Copyright © 2023 – Todos os Direitos Reservados.</p>
+</footer>
+</html>

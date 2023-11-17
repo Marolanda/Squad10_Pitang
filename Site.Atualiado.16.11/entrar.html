@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Pitang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+    <style>
+        /* Estilo CSS para os campos de entrada */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="https://www.pitang.com/" target="_blank"></a>
+            <img src="pitang-logo2.png" alt="logo pitang" title="Pitang" class="logo">
+        </nav>
+        
+        <nav class="navbar">
+            <a href="index.html" rel="next" target="_self">Home</a>
+            <a href="sobre-a-pitang.html" rel="next" target="_self">Sobre a Pitang</a>
+            <a href="contato.html" rel="next" target="_self">Contato</a>
+            <a href="entrar.html" rel="next" target="_self" class="linkpaginas">Entrar</a>
+           
+           
+        </nav>    
+    </header>
+    
+    <main class="Login">
+        <h1 class="entrar">Entrar</h1>
+        
+        <form>
+            
+            <label for="email">Email:</label>
+
+            <input type="text" id="email" name="email">
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+
+            <button id="entrarBtn">Entrar</button>
+        </form>
+    </main>
+
+    
+
+    <script>
+         // Adiciona um evento de clique ao botão "Entrar"
+        document
+            .getElementById("entrarBtn")
+            .addEventListener("click", function (event) {
+            // Redireciona o usuário para a página de listagem de clientes
+            event.preventDefault();
+            window.location.href = "listagem-clientes.html";
+        });
+    </script>           
+</body>
+
+<footer class="rodape">
+    <div class="rodape">
+
+        <div class="rodape-div-1">
+            <div class="rodape-div-1-coluna">
+                <img src="pitang-logo2.png" alt="logo pitang" title="Pitang" class="logo1">
+                <p>Cais do Apolo, 222 - 13º Andar - Recife, PE, 50030-230</p>
+                <p>(81) 3134-5200</p>
+            </div>
+        </div>
+
+        <div class="rodape-div-2">
+            <div class="rodape-div-2-coluna">
+                <span><b>Desenvolvido pelo Squad 10</b></span>
+            </div>
+        </div>
+
+
+
+    </div>
+    <p class="rodape-direitos">Copyright © 2023 – Todos os Direitos Reservados.</p>
+</footer>
+</html>

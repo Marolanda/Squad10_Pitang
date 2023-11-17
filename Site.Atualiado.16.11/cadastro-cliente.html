@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configuração da codificação de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Configuração de exibição em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título da página exibido na aba do navegador -->
+    <title>Cadastro de Cliente - Pitang</title>
+
+    <!-- Vinculação do arquivo CSS para estilização -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícone da página exibido na aba do navegador -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="https://www.pitang.com/" target="_blank"></a>
+            <img src="pitang-logo2.png" alt="logo pitang" title="Pitang" class="logo">
+        </nav>
+
+        <nav class="navbar">
+            <a href="editar-cliente.html" id="editarClienteLink" rel="next" target="_self">Editar Cliente</a>
+            <a href="listagem-clientes.html" class="linkpaginas" rel="next" target="_self">Listagem de Clientes</a>
+            <a href="visualizar-cliente.html" id="visualizacaoClienteLink" rel="next" target="_self">Visualizar Cliente</a>
+            <a href="cadastro-cliente.html" rel="next" target="_self">Cadastro de Cliente</a>
+            <a href="index.html" rel="next" target="_self"> Sair </a>
+    </nav>
+
+    </header>
+  
+
+    
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Título principal da página (exibe "Cadastro de Cliente") -->
+        <h1 id="pageTitle">Cadastro de Cliente</h1>
+
+        <!-- Formulário de cadastro de cliente -->
+        <form id="cadastroClienteForm">
+            <!-- Campos do formulário -->
+            <p><label for="nomeCliente">Nome do Cliente:</label>
+            <input type="text" id="nomeCliente" required>
+</p>
+           <p><label for="cnpjCliente">CNPJ do Cliente:</label>
+            <input type="text" id="cnpjCliente" required pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}" title="Digite um CNPJ válido no formato XX.XXX.XXX/XXXX-XX"></p> 
+
+            <p><label for="enderecoCliente">Endereço:</label>
+            <input type="text" id="enderecoCliente" required></p>
+
+           <p><label for="emailCliente">Email:</label>
+            <input type="email" id="emailCliente" required></p> 
+
+            <p><label for="telefoneCliente">Telefone:</label>
+            <input type="tel" id="telefoneCliente" required></p>
+
+            <p><label for="responsavelCliente">Responsável:</label>
+            <input type="text" id="responsavelCliente" required></p>
+
+            <p><label for="creditosPaginas">Créditos de Páginas:</label>
+            <input type="number" id="creditosPaginas" required></p>
+<br>
+            <!-- Botão para cadastrar cliente -->
+            <button id="submit">Cadastrar Cliente</button>
+        </form>
+    </main>
+
+   
+
+    <!-- Vinculação do arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+<footer class="rodape">
+    <div class="rodape">
+
+        <div class="rodape-div-1">
+            <div class="rodape-div-1-coluna">
+                <img src="pitang-logo2.png" alt="logo pitang" title="Pitang" class="logo1">
+                <p>Cais do Apolo, 222 - 13º Andar - Recife, PE, 50030-230</p>
+                <p>(81) 3134-5200</p>
+            </div>
+        </div>
+
+        <div class="rodape-div-2">
+            <div class="rodape-div-2-coluna">
+                <span><b>Desenvolvido pelo Squad 10</b></span>
+            </div>
+        </div>
+
+
+
+    </div>
+    <p class="rodape-direitos">Copyright © 2023 – Todos os Direitos Reservados.</p>
+</footer>
+</html>
